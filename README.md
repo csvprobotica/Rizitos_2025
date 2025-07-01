@@ -37,13 +37,11 @@ Below is the list of parts we used to assemble our self-driving vehicle:
 Building Instructions
 ====
 * Robot Structure:
-  - The main idea of the design was developed by us and two sources were used as a guideline.[`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
-* Components Assembly:
-  - The Studio 2.0 application was used for the creation and 3D modeling of all parts in the [`models`]() directory.
+  - The main idea of  Rizito’s design was developed by us and a source that  we used as a guideline .[`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
 * Operating Diagram:
-  - The directory  [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes)contains a connection diagram where all the ports used are distributed, a process diagram which details all the actions to be performed and a list of electronic components in which each of the elements used are described.
+  - The directory  [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes)contains Rizito's connection ports diagram where all the ports used are distributed, and the  list of electronic components which each of the elements used are described.
 * Programming Code: (Block and Python)
-  - The directory [`scr`](https://github.com/csvprobotica/RoSGhost/tree/main/src) contains the main source code realized in a block system using the Lego Inventor Mindstorms program and Python Code.
+  - The directory [`scr`](https://github.com/csvprobotica/RoSGhost/tree/main/src) directory contains the main source code written in Arduino (C++) using the mBlock programming environment. Which manages the robot’s key functions such as movement and sensor responses.
 
 All the programming has been done by ourselves.
 
