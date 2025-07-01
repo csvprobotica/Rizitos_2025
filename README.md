@@ -1,6 +1,7 @@
-## RoSGhost WRO 2024
+## Team Rizitos WRO 2025
 
-_The RoSGhost team is integrated by Nahomy Sclopis, Alex Gonzalez and Alexis Quintero, who represent Colegio San Vicente de Paúl, Santiago in this Future Engineers competition._ 
+_We are Team Rizitos, a robotics team competing in the Future  Engineers category of the WRO. Our group is made up of two seniors, Flor Glaize and Francis Mojica , and one junior, Hebe Hernández. Together, we combine creativity, teamwork, and technical skills to bring our robot to life.
+Our robot, also named Rizitos, is designed to complete 3 laps and overcome a variety of obstacles in the WRO Future Engineers course. We proudly represent Colegio San Vicente de Paúl from Santiago de Veraguas, Panamá._ 
 
 Engineering materials
 ====
