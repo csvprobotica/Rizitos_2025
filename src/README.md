@@ -7,7 +7,7 @@ All Rizito's programming has been done by ourselves.
 
 ## Text-style Code
 
-This screenshot shows Rizito's Arduino text-style code.
+This screenshot shows Rizito's Arduino text-style code which was developed in MBLOCK.
 
 ![Regular](https://github.com/csvprobotica/RoSGhost/blob/main/src/Pyhton_Code.png)
 
