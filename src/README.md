@@ -1,19 +1,14 @@
 Control software
 ====
 
-This directory contains the main source code made in the Lego Inventor MINDSTORMS program, the code is based on [`blocks`](https://github.com/csvprobotica/RoSGhost/blob/main/src/RoSGhost.lms) and also in [`python code`](https://github.com/csvprobotica/RoSGhost/blob/main/src/runRoSGhost.py).
+This directory contains Rizito's main source code in the MBLOCK program, the code is based on [`text`](https://github.com/csvprobotica/RoSGhost/blob/main/src/RoSGhost.lms) 
 
-All the programming has been done by ourselves.
+All Rizito's programming has been done by ourselves.
 
-## Python Code
+## Text-style Code
 
-This image shows a screenshot of part of the source code running in the Lego application.
+This screenshot shows Rizito's Arduino text-style code.
 
 ![Regular](https://github.com/csvprobotica/RoSGhost/blob/main/src/Pyhton_Code.png)
 
-## Block Code
-
-This image shows a screenshot of part of the block programming running in the Lego application.
-
-![Regular](https://github.com/csvprobotica/RoSGhost/blob/main/src/Block_Code.png)
 
