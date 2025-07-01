@@ -6,17 +6,33 @@ Our robot, also named Rizitos, is designed to complete 3 laps and overcome a var
 Engineering materials
 ====
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2024.
+This repository includes all the engineering materials we used to build our robot, Rizitos, for the 2025 season of the WRO Future Engineers competition.
+Below is the list of parts we used to assemble our self-driving vehicle:
 
 Materials to build our robot:
-* 1 Lego Inventor Large Hub 88016
-* 1 Large Angular Motor 88017
-* 1 Medium Angular Motor 88018
-* 3 Technic Distance Sensor 45604
-* 1 Technic Color Sensor 45605
-* 1 Rechargeable battery 7.4V 2100mAh
-* Integrated gyroscope
-* 3D modeling designs for assembly
+•	OSOYOO Basic Board for Arduino (Fully compatible with Arduino UNO R3) – Quantity: 1
+•	OSOYOO Motor Shield V1.1 – Quantity: 1
+•	MG90S Servo Motor – Quantity: 1
+•	Voltage Meter – Quantity: 1
+•	Tracking Sensor – Quantity: 1
+•	Ultrasonic Sensor – Quantity: 1
+•	Servo Motor – Quantity: 1
+•	Mount Holder for Ultrasonic Sensor – Quantity: 1
+•	ESP8266 Wi-Fi Shield – Quantity: 1
+•	HC Module – Quantity: 1
+•	Car Chassis – Quantity: 1
+•	Motor with Wires – Quantity: 1
+•	Wheels – Quantity: 4
+•	9V Battery Box – Quantity: 1
+•	9V Battery – Quantity: 1
+•	Phillips Screwdriver – Quantity: 1
+•	Hex Screwdriver – Quantity: 1
+•	L-type Wrench – Quantity: 1
+•	20-pin 15 cm Female-to-Female Cable – Quantity: 1
+•	7-pin 25 cm Female-to-Female Cable – Quantity: 1
+•	3-pin 15 cm Female-to-Female Cable – Quantity: 1
+•	Steering Cup – Quantity: 2
+
 
 Building Instructions
 ====
