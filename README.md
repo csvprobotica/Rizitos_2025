@@ -138,11 +138,11 @@ Here is a detailed description of the strategy implemented in the code:
    - The robot remains in its final position, indicating the completion of its task.
 
 ## Challenges
-_During the process of building and programming Rizitos , we experienced several challenges that helped us learn and improve as a team. The main difficulties we faced were:
-1.	It Was Our First Time Using Arduino
-This project was our first time working with Arduino, so we had to learn how to connect the components, understand the board, and figure out how it all worked. It was a new experience for all of us, and we had to spend extra time learning and testing.
-2.	Adapting the Ultrasonic Sensor to the New Robot Model
-One of the challenges we faced was using the ultrasonic distance sensor correctly with our robot. Since this was our first time working with this specific robot model, it took us a while to understand which ports to use and how to connect the sensor properly. At first, the readings weren’t consistent, and we weren’t sure if it was a wiring issue or a problem in the code. It required several tests and adjustments before we were finally able to get it to detect obstacles as expected.
-3.	Using Text-Based Programming Instead of Blocks
+_During the process of building and programming Rizitos , we experienced several challenges that helped us learn and improve as a team. The main difficulties we faced were:_
+_1.	It Was Our First Time Using Arduino
+This project was our first time working with Arduino, so we had to learn how to connect the components, understand the board, and figure out how it all worked. It was a new experience for all of us, and we had to spend extra time learning and testing._
+_2.	Adapting the Ultrasonic Sensor to the New Robot Model
+One of the challenges we faced was using the ultrasonic distance sensor correctly with our robot. Since this was our first time working with this specific robot model, it took us a while to understand which ports to use and how to connect the sensor properly. At first, the readings weren’t consistent, and we weren’t sure if it was a wiring issue or a problem in the code. It required several tests and adjustments before we were finally able to get it to detect obstacles as expected._
+_3.	Using Text-Based Programming Instead of Blocks
 Instead of block-based coding, we used text-style programming through mBlock. This made it a bit more difficult because we had to be careful with syntax and understand how to write each line of code correctly. Even small mistakes could cause the robot to stop working, so it required a lot of attention and patience._
 
