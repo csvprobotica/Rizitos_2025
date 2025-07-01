@@ -10,8 +10,8 @@ This repository includes all the engineering materials we used to build our robo
 
 Below is the list of parts we used to assemble our self-driving vehicle:
 
-* OSOYOO Basic Board for Arduino (Fully compatible with Arduino UNO R3) – Quantity: 1
-*	OSOYOO Motor Shield V1.1 – Quantity: 1
+* Basic Board for Arduino (Fully compatible with Arduino UNO R3) – Quantity: 1
+*	Motor Shield V1.1 – Quantity: 1
 *	MG90S Servo Motor – Quantity: 1
 *	Voltage Meter – Quantity: 1
 *	Tracking Sensor – Quantity: 1
@@ -37,7 +37,7 @@ Below is the list of parts we used to assemble our self-driving vehicle:
 Building Instructions
 ====
 * Robot Structure:
-  - The main idea of the design was developed by us and two sources were used as a guideline.[`M.V.P`](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.lego.com/cdn/product-assets/product.bi.additional.main.pdf/51515_MVP.pdf&ved=2ahUKEwiw8bretaWHAxV0mbAFHf3RBCYQFnoECBMQAQ&usg=AOvVaw04D5riAZvc2TIGsk0whvge) and [`Antons Mindstorms Hot Rod`](https://www.antonsmindstorms.com/product/hot-rod-with-spike-prime-pdf-building-instructions/)
+  - The main idea of the design was developed by us and two sources were used as a guideline.[`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
 * Components Assembly:
   - The Studio 2.0 application was used for the creation and 3D modeling of all parts in the [`models`]() directory.
 * Operating Diagram:
