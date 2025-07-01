@@ -7,9 +7,8 @@ Engineering materials
 ====
 
 This repository includes all the engineering materials we used to build our robot, Rizitos, for the 2025 season of the WRO Future Engineers competition.
-Below is the list of parts we used to assemble our self-driving vehicle:
 
-Materials to build our robot:
+Below is the list of parts we used to assemble our self-driving vehicle:
 
 * OSOYOO Basic Board for Arduino (Fully compatible with Arduino UNO R3) – Quantity: 1
 *	OSOYOO Motor Shield V1.1 – Quantity: 1
