@@ -51,10 +51,10 @@ All the programming has been done by ourselves.
 
 ## Content
 
-* [`models`](https://github.com/csvprobotica/RoSGhost/tree/main/models) in this directory you will find the 3D modeled files for the assembly of the robot and its components.
-* [`other`](https://github.com/csvprobotica/RoSGhost/tree/main/other) in this directory you will find additional files of the robot operation, process diagram and execution.
-* [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes) contains a schematic diagram in PNG format of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they are connected to each other.
-* [`src`](https://github.com/csvprobotica/RoSGhost/tree/main/src) contains code of control software for all components which were programmed to participate in the competition.
+* [`models`](https://github.com/csvprobotica/RoSGhost/tree/main/models) in this archive you'll  find Rizito's 3D models diagrams with its components.
+* [`other`](https://github.com/csvprobotica/RoSGhost/tree/main/other) this carpet contains additional files of Rizito's operation through the course via a diagram.
+* [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes) contains an explanatory  diagram in PNG format of the electromechanical components illustrating all the elements (motors, sensors ,etc.) with its connections.
+* [`src`](https://github.com/csvprobotica/RoSGhost/tree/main/src) this record .
 * [`t-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/t-photos) contains 2 photos of the team (an official one and one funny photo with all team members).
 * [`v-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/v-photos) contains 6 photos of the vehicle (from every side, from top and bottom).
 * [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) contains the video.mp4 file with the robot driving demonstration.
