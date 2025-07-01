@@ -10,8 +10,7 @@ This repository includes all the engineering materials we used to build our robo
 Below is the list of parts we used to assemble our self-driving vehicle:
 
 Materials to build our robot:
-* okokokoko
-* okooko
+
 * OSOYOO Basic Board for Arduino (Fully compatible with Arduino UNO R3) – Quantity: 1
 *	OSOYOO Motor Shield V1.1 – Quantity: 1
 *	MG90S Servo Motor – Quantity: 1
