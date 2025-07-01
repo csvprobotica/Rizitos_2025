@@ -54,10 +54,10 @@ All the programming has been done by ourselves.
 * [`models`](https://github.com/csvprobotica/RoSGhost/tree/main/models) in this archive you'll  find Rizito's 3D models diagrams with its components.
 * [`other`](https://github.com/csvprobotica/RoSGhost/tree/main/other) this carpet contains additional files of Rizito's operation through the course via a diagram.
 * [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes) contains an explanatory  diagram in PNG format of the electromechanical components illustrating all the elements (motors, sensors ,etc.) with its connections.
-* [`src`](https://github.com/csvprobotica/RoSGhost/tree/main/src) this record .
-* [`t-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/t-photos) contains 2 photos of the team (an official one and one funny photo with all team members).
-* [`v-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/v-photos) contains 6 photos of the vehicle (from every side, from top and bottom).
-* [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) contains the video.mp4 file with the robot driving demonstration.
+* [`src`](https://github.com/csvprobotica/RoSGhost/tree/main/src) this record contains all Rizito's Arduino code programming ( which is text-based style) that makes our robot move.
+* [`t-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/t-photos) you'll find Rizito's Team members photos (2) (the official one and another  with  a gist of fun).
+* [`v-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/v-photos) in this folder you'll encounter our robot, Rizitos, from 6 different angles.
+* [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) the video.mp4 file shows Rizitos in action, where it completes the whole 3 laps.
 
 ## Mobility
 This robot is designed to evade lateral obstacles, complete three full rotations, and stop at its initial position using a rear motor for forward movement and a front motor for turning.
