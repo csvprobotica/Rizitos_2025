@@ -16,7 +16,7 @@ This folder contains images of Rizitos, our robot, captured from various angles.
 ![4](https://github.com/csvprobotica/Rizitos_2025/blob/main/v-photos/v-photos/v1/rizitos-right%20side.jpg)
 
 ## Top
-![5](https://github.com/csvprobotica/RoSGhost/blob/main/v-photos/v3/RoSGhost-Top.jpg)
+![5](https://github.com/csvprobotica/Rizitos_2025/blob/main/v-photos/v-photos/v1/rizitos-top.jpg)
 
 ## Bottom 
 ![6](https://github.com/csvprobotica/RoSGhost/blob/main/v-photos/v3/RoSGhost-Bottom.jpg)
