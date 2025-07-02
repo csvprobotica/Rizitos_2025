@@ -66,25 +66,25 @@ This mobility system allows the robot to autonomously navigate environments with
 Below are the key aspects of its mobility:
 
 Continuous Forward Movement:
-	•	The motor interface K2 is controlled by digital pin D7 for forward motion and D8 for reverse.
-	•	The robot moves forward continuously using D7 while monitoring distances with the ultrasonic sensor.
+	*	The motor interface K2 is controlled by digital pin D7 for forward motion and D8 for reverse.
+	*	The robot moves forward continuously using D7 while monitoring distances with the ultrasonic sensor.
 
 Lateral Obstacle Evasion:
-	•	The ultrasonic sensor is mounted on a servo motor connected to D10, allowing it to rotate for side detection.
-	•	The sensor uses digital pins D2 (Trig) and D3 (Echo) for distance measurement, and is powered through SV and GND.
-	•	When an obstacle is detected, the robot stops forward motion (D7 OFF) and rotates the ultrasonic sensor via D10 to scan the sides.
-	•	Based on the sensor reading, the robot turns using the steering servo on D9, either left or right.
-	•	Once the path is clear, the robot resumes forward motion using D7.
+	*	The ultrasonic sensor is mounted on a servo motor connected to D10, allowing it to rotate for side detection.
+	*	The sensor uses digital pins D2 (Trig) and D3 (Echo) for distance measurement, and is powered through SV and GND.
+	*	When an obstacle is detected, the robot stops forward motion (D7 OFF) and rotates the ultrasonic sensor via D10 to scan the sides.
+	*	Based on the sensor reading, the robot turns using the steering servo on D9, either left or right.
+	*	Once the path is clear, the robot resumes forward motion using D7.
 
 Turning and Navigation:
-	•	The steering system uses the MG90S Micro Servo connected to D9.
-	•	To turn left or right, the servo is rotated to a predefined angle via D9.
-	•	After the turn, the servo returns to its neutral position to continue forward.
+	*	The steering system uses the MG90S Micro Servo connected to D9.
+	*	To turn left or right, the servo is rotated to a predefined angle via D9.
+	*	After the turn, the servo returns to its neutral position to continue forward.
 
 Stopping at the Initial Position:
-	•	After completing three rotations, the robot stops the motor interface by setting D7 and D8 LOW.
-	•	The steering servo on D9 is returned to its centered position.
-	•	The robot remains stationary at the initial
+	*	After completing three rotations, the robot stops the motor interface by setting D7 and D8 LOW.
+	*	The steering servo on D9 is returned to its centered position.
+	*	The robot remains stationary at the initial
 
 ## Strategy
 
