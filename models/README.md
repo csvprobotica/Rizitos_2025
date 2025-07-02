@@ -1,7 +1,7 @@
 ## Rizito's Model
 
 
-We are using visual references instead of a 3D model for our robot. All the required photos are located in the [`v-photos`](https://github.com/csvprobotica/Rizitos_2025/tree/main/v-photos) folder.
+We are using visual references for our robot. All the required photos are located in the [`v-photos`](https://github.com/csvprobotica/Rizitos_2025/tree/main/v-photos) folder.
 
 These include:
 - Front, back, top, and side views of the robot  
