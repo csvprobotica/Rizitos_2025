@@ -1,7 +1,7 @@
 Control software
 ====
 
-This directory contains Rizito's main source code in the MBLOCK program, the code is based on [`text`](https://github.com/csvprobotica/RoSGhost/blob/main/src/RoSGhost.lms) 
+This directory contains Rizito's main source code in the MBLOCK program, the code is based on [`text`](https://github.com/csvprobotica/Rizitos_2025/blob/main/src/Rizitos.ino) 
 
 All Rizito's programming has been done by ourselves.
 
