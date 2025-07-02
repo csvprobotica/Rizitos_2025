@@ -57,34 +57,40 @@ All the programming has been done by ourselves.
 * [`v-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/v-photos) in this folder you'll encounter our robot, Rizitos, from 6 different angles.
 * [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) the video.mp4 file shows Rizitos in action, where it completes the whole 3 laps.
 
-## Mobility
+## Rizito's Mobility System Overview
 
-Rizito's is designed to evade lateral obstacles, complete three full rotations, and stop at its initial position using the motor interface connected to D7 (forward) and D8 (reverse), a steering servo on D9, and an ultrasonic scanning servo on D10.
 
-This mobility system allows the robot to autonomously navigate environments with obstacles, perform evasive maneuvers, and maintain orientation through servo-controlled direction changes.
+**Rizito's is designed to:**
+- *Evade lateral obstacles*
+- *Complete three full rotations*
+- *Stop at its initial position*
 
-Below are the key aspects of its mobility:
+It achieves this using:
+- A **motor interface** connected to **D7** (forward) and **D8** (reverse)  
+- A **steering servo** on **D9**  
+- An **ultrasonic scanning servo** on **D10**
 
-Continuous Forward Movement:
-	*	The motor interface K2 is controlled by digital pin D7 for forward motion and D8 for reverse.
-	*	The robot moves forward continuously using D7 while monitoring distances with the ultrasonic sensor.
+This mobility system allows the robot to autonomously:
+- Navigate environments with obstacles  
+- Perform evasive maneuvers  
+- Maintain orientation through servo-controlled direction changes  
 
-Lateral Obstacle Evasion:
-	*	The ultrasonic sensor is mounted on a servo motor connected to D10, allowing it to rotate for side detection.
-	*	The sensor uses digital pins D2 (Trig) and D3 (Echo) for distance measurement, and is powered through SV and GND.
-	*	When an obstacle is detected, the robot stops forward motion (D7 OFF) and rotates the ultrasonic sensor via D10 to scan the sides.
-	*	Based on the sensor reading, the robot turns using the steering servo on D9, either left or right.
-	*	Once the path is clear, the robot resumes forward motion using D7.
+---
 
-Turning and Navigation:
-	*	The steering system uses the MG90S Micro Servo connected to D9.
-	*	To turn left or right, the servo is rotated to a predefined angle via D9.
-	*	After the turn, the servo returns to its neutral position to continue forward.
+###  Key Aspects of Rizito's Mobility
 
-Stopping at the Initial Position:
-	*	After completing three rotations, the robot stops the motor interface by setting D7 and D8 LOW.
-	*	The steering servo on D9 is returned to its centered position.
-	*	The robot remains stationary at the initial
+#### 1. Continuous Forward Movement
+- The motor interface is controlled by digital pin **D7** for forward motion and **D8** for reverse.
+- The robot moves forward continuously using **D7** while monitoring distances with the ultrasonic sensor.
+
+#### 2. Lateral Obstacle Evasion
+- The ultrasonic sensor is mounted on a servo motor connected to **D10**, allowing it to rotate for side detection.
+- The sensor uses digital pins **D2** (Trig) and **D3** (Echo) for distance measurement, and is powered through **SV** and **GND**.
+- When an obstacle is detected:
+  - The robot stops forward motion (**D7 OFF**).
+  - It rotates the ultrasonic sensor via **D10** to scan both sides.
+  - Based on the sensor readi
+
 
 ## Strategy
 
