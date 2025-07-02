@@ -59,7 +59,6 @@ All the programming has been done by ourselves.
 
 ## Rizito's Mobility System Overview
 
-
 **Rizito's is designed to:**
 - *Evade lateral obstacles*
 - *Complete three full rotations*
@@ -75,7 +74,6 @@ This mobility system allows the robot to autonomously:
 - Perform evasive maneuvers  
 - Maintain orientation through servo-controlled direction changes  
 
----
 
 ###  Key Aspects of Rizito's Mobility
 
@@ -89,7 +87,40 @@ This mobility system allows the robot to autonomously:
 - When an obstacle is detected:
   - The robot stops forward motion (**D7 OFF**).
   - It rotates the ultrasonic sensor via **D10** to scan both sides.
-  - Based on the sensor readi
+  - Based on the sensor readings, the robot turns using the steering servo on **D9** (left or right).
+  - Once the path is clear, the robot resumes forward motion using **D7**.
+
+#### 3. Turning and Navigation
+- The steering system uses the **MG90S Micro Servo** connected to **D9**.
+- To turn left or right, the servo is rotated to a predefined angle via **D9**.
+- After the turn, the servo returns to its neutral position to continue forward.
+
+#### 4. Stopping at the Initial Position
+- After completing three full rotations:
+  - The robot stops the motor interface by setting **D7** and **D8** LOW.
+  - The steering servo on **D9** returns to its centered position.
+  - The robot remains stationary at the initial point.
+
+
+
+###  Why These Components?
+
+We selected these specific components based on their compatibility, reliability, and simplicity for first-time Arduino users:
+
+- **Motor Interface:**  
+  This module offers basic yet effective control over DC motors with forward and reverse motion using simple digital signals. It’s ideal for beginners due to its plug-and-play nature.
+
+- **MG90S Micro Servo (Steering):**  
+  The MG90S is compact, fast, and accurate — perfect for steering applications. It provides enough torque for quick direction changes while being small enough to integrate easily into the robot chassis.
+
+- **Micro Servo for Ultrasonic Rotation:**  
+  Using a servo to rotate the ultrasonic sensor allows for lateral scanning without moving the entire robot. This improves obstacle detection and pathfinding in narrow environments.
+
+- **Ultrasonic Sensor (HC-SR04):**  
+  This sensor is affordable, easy to use, and provides reliable distance readings. Its wide usage in robotics makes it a solid choice for measuring obstacles and avoiding collisions.
+
+By combining these components, we created a robot that is both functional and easy to understand, making it ideal for a student team working with Arduino-based systems for the first time.
+
 
 
 ## Strategy
