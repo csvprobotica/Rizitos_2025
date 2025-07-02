@@ -1,7 +1,7 @@
 ##  Team Rizitos WRO 2025
 
-_We are Team Rizitos, a robotics team competing in the Future  Engineers Senior's category of the WRO. Our group is made up of two seniors, Flor Glaize and Francis Mojica , and one junior, Hebe Hernández. Together, we combine creativity, teamwork, and technical skills to bring our robot to life.
-Our robot, also named Rizitos, is designed to complete 3 laps and overcome a variety of obstacles in the WRO Future Engineers Senior's course. We proudly represent Colegio San Vicente de Paúl from Santiago de Veraguas, Panamá._ 
+_We are **Team Rizitos**, a robotics team competing in the **Future Engineers Senior's category of the WRO**. Our group is made up of two seniors, **Flor Glaize and Francis Mojica** , and one junior, **Hebe Hernández**. Together, we combine creativity, teamwork, and technical skills to bring our robot to life.
+Our robot, also named **Rizitos**, is designed to complete 3 laps and overcome a variety of obstacles in the WRO Future Engineers Senior's course. We proudly represent **Colegio San Vicente de Paúl from Santiago de Veraguas, Panamá**._ 
 
 Engineering materials
 ====
@@ -36,11 +36,11 @@ Below is the list of parts we used to assemble our self-driving vehicle:
 
 Building Instructions
 ====
-* Robot Structure:
+* **Robot Structure:**
   - The main idea of  Rizito’s design was developed by us and a source that  we used as a guideline .[`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
-* Operating Diagram:
+* **Operating Diagram:**
   - The directory  [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes)contains Rizito's connection ports diagram where all the ports used are distributed, and the  list of electronic components which each of the elements used are described.
-* Programming Code: (Block and Python)
+* **Programming Code: (Arduino)**
   - The directory [`scr`](https://github.com/csvprobotica/RoSGhost/tree/main/src) directory contains the main source code written in Arduino (C++) using the mBlock programming environment. Which manages the robot’s key functions such as movement and sensor responses.
 
 All the programming has been done by ourselves.
@@ -49,13 +49,13 @@ All the programming has been done by ourselves.
 
 ## Content
 
-* [`models`](https://github.com/csvprobotica/RoSGhost/tree/main/models) in this archive you'll  find Rizito's 3D models diagrams with its components.
-* [`other`](https://github.com/csvprobotica/RoSGhost/tree/main/other) this carpet contains additional files of Rizito's operation through the course via a diagram.
+* [`models`](https://github.com/csvprobotica/RoSGhost/tree/main/models) in this archive you'll  find Rizito's models.
+* [`other`](https://github.com/csvprobotica/RoSGhost/tree/main/other) this carpet contains additional files of Rizito's materials and movement operation through the course via a diagram.
 * [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes) contains an explanatory  diagram in PNG format of the electromechanical components illustrating all the elements (motors, sensors ,etc.) with its connections.
 * [`src`](https://github.com/csvprobotica/RoSGhost/tree/main/src) this record contains all Rizito's Arduino code programming ( which is text-based style) that makes our robot move.
 * [`t-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/t-photos) you'll find Rizito's Team members photos (2) (the official one and another  with  a gist of fun).
 * [`v-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/v-photos) in this folder you'll encounter our robot, Rizitos, from 6 different angles.
-* [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) the video.mp4 file shows Rizitos in action, where it completes the whole 3 laps.
+* [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) the video shows Rizitos in action, where it completes the whole 3 laps.
 
 ## Rizito's Mobility System Overview
 
@@ -171,12 +171,12 @@ Here is a detailed description of the strategy implemented in the code:
 ## Challenges
 _During the process of building and programming Rizitos , we experienced several challenges that helped us learn and improve as a team. The main difficulties we faced were:_
 
-_1.	It Was Our First Time Using Arduino
+_1.	**It Was Our First Time Using Arduino**
 This project was our first time working with Arduino, so we had to learn how to connect the components, understand the board, and figure out how it all worked. It was a new experience for all of us, and we had to spend extra time learning and testing._
 
-_2.	Adapting the Ultrasonic Sensor to the New Robot Model
+_2.	**Adapting the Ultrasonic Sensor to the New Robot Model**
 One of the challenges we faced was using the ultrasonic distance sensor correctly with our robot. Since this was our first time working with this specific robot model, it took us a while to understand which ports to use and how to connect the sensor properly. At first, the readings weren’t consistent, and we weren’t sure if it was a wiring issue or a problem in the code. It required several tests and adjustments before we were finally able to get it to detect obstacles as expected._
 
-_3.	Using Text-Based Programming Instead of Blocks
+_3.	**Using Text-Based Programming Instead of Blocks**
 Instead of block-based coding, we used text-style programming through mBlock. This made it a bit more difficult because we had to be careful with syntax and understand how to write each line of code correctly. Even small mistakes could cause the robot to stop working, so it required a lot of attention and patience._
 
