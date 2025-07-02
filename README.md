@@ -58,37 +58,33 @@ All the programming has been done by ourselves.
 * [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) the video.mp4 file shows Rizitos in action, where it completes the whole 3 laps.
 
 ## Mobility
-This robot is designed to evade lateral obstacles, complete three full rotations, and stop at its initial position using a rear motor for forward movement and a front motor for turning.
 
-This mobility system allows the robot to autonomously navigate environments with obstacles, perform evasive maneuvers, and maintain precise orientation using the gyroscope.
+Rizito's is designed to evade lateral obstacles, complete three full rotations, and stop at its initial position using the motor interface connected to D7 (forward) and D8 (reverse), a steering servo on D9, and an ultrasonic scanning servo on D10.
+
+This mobility system allows the robot to autonomously navigate environments with obstacles, perform evasive maneuvers, and maintain orientation through servo-controlled direction changes.
 
 Below are the key aspects of its mobility:
-1. Continuous Forward Movement:
-   - The rear motor, connected to port B, drives the robot forward at a constant speed.
-   - The robot moves continuously while monitoring distances to obstacles on both sides.
 
-2. Lateral Obstacle Evasion:
-   - Three ultrasonic sensors are connected to ports D (right), E (left) and F (front).
-   - These sensors detect obstacles on the sides of the robot.
-   - If the right sensor detects a wall within 10 cm, the robot stops the rear motor and uses the front motor to turn 90 degrees to the left.
-   - If the left sensor detects a wall within 10 cm, the robot stops the rear motor and uses the front motor to turn 90 degrees to the right.
-   - After evading an obstacle, the rear motor resumes forward movement.
+Continuous Forward Movement:
+	•	The motor interface K2 is controlled by digital pin D7 for forward motion and D8 for reverse.
+	•	The robot moves forward continuously using D7 while monitoring distances with the ultrasonic sensor.
 
-3. Turning and Navigation:
-   - The front motor, connected to port A, is used exclusively for precise turns.
-   - To turn 90 degrees to the left, the front motor is activated in the opposite direction for a specific duration.
-   - To turn 90 degrees to the right, the front motor is activated in the direct direction for a specific duration.
-   - Turns are calibrated to ensure the robot maintains its course and can navigate effectively around obstacles.
+Lateral Obstacle Evasion:
+	•	The ultrasonic sensor is mounted on a servo motor connected to D10, allowing it to rotate for side detection.
+	•	The sensor uses digital pins D2 (Trig) and D3 (Echo) for distance measurement, and is powered through SV and GND.
+	•	When an obstacle is detected, the robot stops forward motion (D7 OFF) and rotates the ultrasonic sensor via D10 to scan the sides.
+	•	Based on the sensor reading, the robot turns using the steering servo on D9, either left or right.
+	•	Once the path is clear, the robot resumes forward motion using D7.
 
-4. Gyroscope Utilization:
-   - The integrated gyroscope in the LEGO Mindstorms hub is used to track the robot's orientation.
-   - At the start, the gyroscope is reset to establish a zero-degree reference angle.
-   - While the robot moves and evades obstacles, the gyroscope measures the cumulative turning angle.
-   - The robot is programmed to complete three full rotations, totaling 1080 degrees.
-   - Each time the gyroscope detects a 360-degree rotation, the lap counter is incremented and the gyroscope angle is reset.
+Turning and Navigation:
+	•	The steering system uses the MG90S Micro Servo connected to D9.
+	•	To turn left or right, the servo is rotated to a predefined angle via D9.
+	•	After the turn, the servo returns to its neutral position to continue forward.
 
-5. Stopping at the Initial Position:
-   - After completing the three rotations, the robot stops the rear motor and remains at the initial position, indicating the task is complete.
+Stopping at the Initial Position:
+	•	After completing three rotations, the robot stops the motor interface by setting D7 and D8 LOW.
+	•	The steering servo on D9 is returned to its centered position.
+	•	The robot remains stationary at the initial
 
 ## Strategy
 The code provided for the LEGO Mindstorms Inventor robot outlines a strategy for autonomous navigation, obstacle evasion, and precise rotational movements.
