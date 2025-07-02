@@ -1,9 +1,10 @@
 Team's photos
 ====
 
-This directory contains two pictures of our team for this competition, one normal and the other funny.
+This folder contains two photographs of our team: one official and one that highlights our team spirit and sense of humor.
 
-The RoSGhost team is integrated by Alex Gonzalez, Nahomy Sclopis and Alexis Quintero, who represent Colegio San Vicente de Paúl in this Future Engineers competition.
+Team Rizitos is made up of Flor, Francis, and Hebe, representing Colegio San Vicente de Paúl from Santiago de Veraguas, Panamá in the Future Engineers category of the World Robot Olympiad. United by creativity, collaboration, and a passion for robotics, we are proud to showcase our work on this global stage.
+
 
 ![Regular](https://github.com/csvprobotica/RoSGhost/blob/main/t-photos/RoSGhost_Team-1.jpg)
 ![Funny](https://github.com/csvprobotica/RoSGhost/blob/main/t-photos/RoSGhost_Team-2.jpg)
