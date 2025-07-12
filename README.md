@@ -3,9 +3,9 @@
   <img src="./assets/logo/rizitos_logo.png" width="220" alt="Rizitos Logo"/>
 </p>
 
-<h1 align="center">Team Rizitos — WRO Future Engineers 2025</h1>
+<h1 align="center">Team Rizitos 🇵🇦 — WRO Future Engineers 2025</h1>
 <p align="center">
-  <i>Panamá • Raspberry Pi 5 • Python • Autonomous Systems</i>
+  <i>Panamá • WRO FUTURE ENGINEERS SENIOR'S CATEGORY • Python • Autonomous Systems</i>
 </p>
 
 <p align="center">
@@ -16,34 +16,30 @@
 
 ---
 
-## 🔷 Introduction
+##  Introduction
 
 We are **Team Rizitos**, a student robotics team from *Colegio San Vicente de Paúl* in Santiago, Veraguas 🇵🇦.  
 Our group includes two seniors — **Flor Glaize** and **Francis Mojica** — and one junior, **Hebe Hernández**.
 
 Together, we combine creativity, logic, and persistence to bring Rizitos to life: a fully autonomous robot designed to overcome obstacles, complete multiple laps, and finish strong.
 
-Our goal isn’t just to build a robot — it’s to understand every part of it, and to represent Panama with purpose, precision, and pride.
 
 ---
 
-## 🚗 And Here We Have **Rizitos**
+##  Our robot **Rizitos**
 
 <p align="center">
   <img src="./assets/robot_banner.jpg" width="80%" alt="Rizitos Robot Front View"/>
 </p>
 
-**Rizitos** is an autonomous self-driving robot we designed and built from scratch for the WRO 2025 challenge.
+**Rizitos** is our autonomous self-driving robot which is designed to complete 3 laps and overcome a variety of obstacles in the WRO Future Engineers Senior's course.
 
 The robot is based on a custom-modified chassis and multi-sensor platform. It includes ultrasonic detection, steering logic, lap tracking, and precise stop behavior — all coded in **Python**, running fully offline on a **Raspberry Pi 5**.
 
-It navigates. It avoids. It completes 3 full laps. And it does it without any remote input.
-
-> “Made from what we had. Powered by what we learned.”
 
 ---
 
-## 👥 Meet the Minds Behind Rizitos
+##  Meet the Minds Behind Rizitos!
 
 <table align="center">
   <tr>
@@ -54,25 +50,25 @@ It navigates. It avoids. It completes 3 full laps. And it does it without any re
   <tr>
     <td align="center">
       <b>Francis Mojica</b><br>
-      Logic & Code<br>
-      <sub>Python, obstacle evasion, lap tracking</sub>
+      Rizito's Software Programmer 💻<br>
+      <sub>Creates Rizito's coding and programming </sub>
     </td>
     <td align="center">
       <b>Flor Glaize</b><br>
-      Mechanical Build<br>
-      <sub>Structure, wheels, mounts, wiring</sub>
+      Rizito's Mechanical Builder ⚙️<br>
+      <sub>Focuses on Rizito's structure and Hardware </sub>
     </td>
     <td align="center">
       <b>Hebe Hernández</b><br>
-      GitHub & Docs<br>
-      <sub>Repository, planning, diagrams</sub>
+     Rizito's Documenter 📄<br>
+      <sub> Records Rizito's GitHub repository, diagrams and schemes</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## ⚙️ Autonomous Mobility System
+##  Rizito's Mobility System
 
 Rizitos is designed to:
 
@@ -98,7 +94,7 @@ Rizitos is designed to:
 
 ---
 
-## 💡 Component Justification
+## Why we chose these components?
 
 - **DC Gear Motors:** Deliver enough torque and speed to maintain consistent movement across the test course.  
 - **Motor Controller Board:** Provides safe GPIO interfacing with adequate current handling.  
@@ -108,7 +104,7 @@ Rizitos is designed to:
 
 ---
 
-## 🧠 System Overview
+##  System Overview
 
 ### Key Functions:
 - Autonomous forward movement  
@@ -130,7 +126,7 @@ Rizitos is designed to:
 
 ---
 
-## 🧭 Strategy for Performance
+##  Strategy for Performance
 
 ### Open Round (No Obstacles)
 
