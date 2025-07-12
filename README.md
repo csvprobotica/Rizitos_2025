@@ -164,6 +164,59 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 | **Ultrasonic Sensor (HC-SR04)**| Provides accurate distance measurements to detect obstacles.                     |
 
 
+---
+
+## 🧭 Navigation Strategy
+
+The code we developed for Rizitos enables it to function **fully offline** and autonomously complete its WRO Future Engineers tasks — from open-lap circuits to obstacle-filled tracks. Using Python and a Raspberry Pi 5, our logic adapts in real-time to environment conditions, enabling dynamic movement, evasive maneuvers, and consistent loop tracking.
+
+---
+
+### 🚦 Open Round Strategy (No Obstacles)
+
+In the Open Round, Rizitos focuses on uninterrupted movement and precise tracking of lap completions:
+
+1. **Initialization**
+   - The system powers up and configures all key GPIO pins.
+   - Motors, servos, and the ultrasonic sensor are initialized.
+
+2. **Lap Execution**
+   - The **rear motor** (controlled via GPIO17/27) pushes the robot forward.
+   - The **steering servo** (GPIO23) is fixed in its neutral center alignment.
+   - A custom lap counter written in Python keeps track of completed loops using time and gyroscopic orientation.
+
+3. **Stop Condition**
+   - After three full laps, the motor driver is stopped.
+   - Rizitos halts and re-centers its servos.
+
+---
+
+### 🚧 Obstacle Round Strategy (Dynamic Avoidance)
+
+In the Challenge Round, Rizitos switches to a reactive navigation strategy using distance sensing and servo control:
+
+1. **Active Scanning**
+   - The **ultrasonic sensor** (HC-SR04) mounted on a scanning servo (GPIO22) rotates left and right.
+   - Obstacle detection occurs continuously through distance sampling (Trig on GPIO5, Echo on GPIO6).
+
+2. **Obstacle Encounter Logic**
+   - If an object is detected ≤15cm ahead:
+     - **Forward motion stops** (motors LOW).
+     - The **scanning servo** sweeps left and right.
+     - Python code determines which side has more clearance.
+     - The **steering servo** (GPIO23) turns the wheels in the clearer direction.
+     - The robot resumes forward movement.
+
+3. **Gyroscopic Orientation**
+   - An IMU/Gyroscope module is used to measure orientation (if available).
+   - The lap counter checks rotational thresholds (360° x 3) to confirm progress.
+
+4. **Completion Behavior**
+   - After the third full lap (with successful evasion logic), the system cuts motor power and resets servos.
+   - Rizitos comes to a full and final stop at its original point.
+
+> This reactive planning system enables Rizitos to perform autonomously without AI inference or remote control — satisfying WRO Future Engineers offline constraints while maintaining flexibility and performance.
+
 
 
 
