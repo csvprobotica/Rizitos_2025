@@ -218,5 +218,18 @@ In the Challenge Round, Rizitos switches to a reactive navigation strategy using
 > This reactive planning system enables Rizitos to perform autonomously without AI inference or remote control!
 
 
+---
+
+
+Rizitos is not just a robot — it’s a reflection of our team’s collaboration, growth, and effort. Every wire connected, every line of code written, and every obstacle overcome was a result of three people working as one.
+
+We are proud of what we’ve built — not just Rizitos, but the experience and bond that came with it. And we’re even more excited to share it with the world!
+
+
+>If you have questions or want to share your thoughts, pfeel free to do so through the GitHub comments!
+
+
+
+
 
 
