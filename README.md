@@ -114,9 +114,7 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 > 🛠️ *All programming and hardware integration were done by ourselves.*
 
 
-> [!NOTE]
-
-> ⚙️ **Rizitos is in constant evolution.**  
+> ⚙️ **Rizitos is in constant evolution!.**  
 > As we iterate, test, and improve our system, both the software and hardware may be updated regularly.  
 > If you notice inconsistencies between sections or media, feel free to reach out or contribute!
 
