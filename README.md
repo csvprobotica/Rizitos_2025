@@ -1,182 +1,194 @@
-##  Team Rizitos WRO 2025
+<!-- Logo/Header -->
+<p align="center">
+  <img src="./assets/logo/rizitos_logo.png" width="220" alt="Rizitos Logo"/>
+</p>
 
-_We are **Team Rizitos**, a robotics team competing in the **Future Engineers Senior's category of the WRO**. Our group is made up of two seniors, **Flor Glaize and Francis Mojica** , and one junior, **Hebe Hernández**. Together, we combine creativity, teamwork, and technical skills to bring our robot to life.
-Our robot, also named **Rizitos**, is designed to complete 3 laps and overcome a variety of obstacles in the WRO Future Engineers Senior's course. We proudly represent **Colegio San Vicente de Paúl from Santiago de Veraguas, Panamá**._ 
+<h1 align="center">Team Rizitos — WRO Future Engineers 2025</h1>
+<p align="center">
+  <i>Panamá • Raspberry Pi 5 • Python • Autonomous Systems</i>
+</p>
 
-Engineering materials
-====
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Raspberry%20Pi%205-20C997?style=flat-square&logo=raspberrypi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Language-Python%203-20C997?style=flat-square&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Team-Colegio%20San%20Vicente%20de%20Paúl-ADB5BD?style=flat-square"/>
+</p>
 
-This repository includes all the engineering materials we used to build our robot, Rizitos, for the 2025 season of the WRO Future Engineers competition.
+---
 
-Below is the list of parts we used to assemble our self-driving vehicle:
+## 🔷 Introduction
 
-* Basic Board for Arduino (Fully compatible with Arduino UNO R3) – Quantity: 1
-*	Motor Shield V1.1 – Quantity: 1
-*	MG90S Servo Motor – Quantity: 1
-*	Voltage Meter – Quantity: 1
-*	Tracking Sensor – Quantity: 1
-*	Ultrasonic Sensor – Quantity: 1
-*	Servo Motor – Quantity: 1
-*	Mount Holder for Ultrasonic Sensor – Quantity: 1
-*	ESP8266 Wi-Fi Shield – Quantity: 1
-*	HC Module – Quantity: 1
-*	Car Chassis – Quantity: 1
-*	Motor with Wires – Quantity: 1
-*	Wheels – Quantity: 4
-*	9V Battery Box – Quantity: 1
-*	9V Battery – Quantity: 1
-*	Phillips Screwdriver – Quantity: 1
-*	Hex Screwdriver – Quantity: 1
-*	L-type Wrench – Quantity: 1
-*	20-pin 15 cm Female-to-Female Cable – Quantity: 1
-*	7-pin 25 cm Female-to-Female Cable – Quantity: 1
-*	3-pin 15 cm Female-to-Female Cable – Quantity: 1
-*	Steering Cup – Quantity: 2
+We are **Team Rizitos**, a student robotics team from *Colegio San Vicente de Paúl* in Santiago, Veraguas 🇵🇦.  
+Our group includes two seniors — **Flor Glaize** and **Francis Mojica** — and one junior, **Hebe Hernández**.
 
+Together, we combine creativity, logic, and persistence to bring Rizitos to life: a fully autonomous robot designed to overcome obstacles, complete multiple laps, and finish strong.
 
-Building Instructions
-====
-* **Robot Structure:**
-  - The main idea of  Rizito’s design was developed by us and a source that  we used as a guideline .[`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
-* **Operating Diagram:**
-  - The directory  [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes)contains Rizito's connection ports diagram where all the ports used are distributed, and the  list of electronic components which each of the elements used are described.
-* **Programming Code: (Arduino)**
-  - The directory [`scr`](https://github.com/csvprobotica/RoSGhost/tree/main/src) directory contains the main source code written in Arduino (C++) using the mBlock programming environment. Which manages the robot’s key functions such as movement and sensor responses.
+Our goal isn’t just to build a robot — it’s to understand every part of it, and to represent Panama with purpose, precision, and pride.
 
-All the programming has been done by ourselves.
+---
 
+## 🚗 And Here We Have **Rizitos**
 
+<p align="center">
+  <img src="./assets/robot_banner.jpg" width="80%" alt="Rizitos Robot Front View"/>
+</p>
 
-## Content
+**Rizitos** is an autonomous self-driving robot we designed and built from scratch for the WRO 2025 challenge.
 
-* [`models`](https://github.com/csvprobotica/RoSGhost/tree/main/models) in this archive you'll  find Rizito's models.
-* [`other`](https://github.com/csvprobotica/RoSGhost/tree/main/other) this carpet contains additional files of Rizito's materials and movement operation through the course via a diagram.
-* [`schemes`](https://github.com/csvprobotica/RoSGhost/tree/main/schemes) contains an explanatory  diagram in PNG format of the electromechanical components illustrating all the elements (motors, sensors ,etc.) with its connections.
-* [`src`](https://github.com/csvprobotica/RoSGhost/tree/main/src) this record contains all Rizito's Arduino code programming ( which is text-based style) that makes our robot move.
-* [`t-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/t-photos) you'll find Rizito's Team members  official photo.
-* [`v-photos`](https://github.com/csvprobotica/RoSGhost/tree/main/v-photos) in this folder you'll encounter our robot, Rizitos, from 6 different angles.
-* [`video`](https://github.com/csvprobotica/RoSGhost/tree/main/video) the video shows Rizitos in action, where it completes the whole 3 laps.
+The robot is based on a custom-modified chassis and multi-sensor platform. It includes ultrasonic detection, steering logic, lap tracking, and precise stop behavior — all coded in **Python**, running fully offline on a **Raspberry Pi 5**.
 
-## Rizito's Mobility System Overview
+It navigates. It avoids. It completes 3 full laps. And it does it without any remote input.
 
-**Rizito's is designed to:**
-- *Evade lateral obstacles*
-- *Complete three full rotations*
-- *Stop at its initial position*
+> “Made from what we had. Powered by what we learned.”
 
-It achieves this using:
-- A **motor interface** connected to **D7** (forward) and **D8** (reverse)  
-- A **steering servo** on **D9**  
-- An **ultrasonic scanning servo** on **D10**
+---
 
-This mobility system allows the robot to autonomously:
-- Navigate environments with obstacles  
-- Perform evasive maneuvers  
-- Maintain orientation through servo-controlled direction changes  
+## 👥 Meet the Minds Behind Rizitos
 
+<table align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./t-photos/rizitos_team.jpg" width="80%" alt="Team Rizitos Group Photo"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Francis Mojica</b><br>
+      Logic & Code<br>
+      <sub>Python, obstacle evasion, lap tracking</sub>
+    </td>
+    <td align="center">
+      <b>Flor Glaize</b><br>
+      Mechanical Build<br>
+      <sub>Structure, wheels, mounts, wiring</sub>
+    </td>
+    <td align="center">
+      <b>Hebe Hernández</b><br>
+      GitHub & Docs<br>
+      <sub>Repository, planning, diagrams</sub>
+    </td>
+  </tr>
+</table>
 
-###  Key Aspects of Rizito's Mobility
+---
 
-#### 1. Continuous Forward Movement
-- The motor interface is controlled by digital pin **D7** for forward motion and **D8** for reverse.
-- The robot moves forward continuously using **D7** while monitoring distances with the ultrasonic sensor.
+## 🧠 System Overview
 
-#### 2. Lateral Obstacle Evasion
-- The ultrasonic sensor is mounted on a servo motor connected to **D10**, allowing it to rotate for side detection.
-- The sensor uses digital pins **D2** (Trig) and **D3** (Echo) for distance measurement, and is powered through **SV** and **GND**.
-- When an obstacle is detected:
-  - The robot stops forward motion (**D7 OFF**).
-  - It rotates the ultrasonic sensor via **D10** to scan both sides.
-  - Based on the sensor readings, the robot turns using the steering servo on **D9** (left or right).
-  - Once the path is clear, the robot resumes forward motion using **D7**.
+### Key Functions:
+- Autonomous forward movement
+- Side-scanning obstacle detection (rotating ultrasonic sensor)
+- Evasive turning with steering servo
+- Lap counter with automatic stop
+- Offline execution — no voice or AI modules
 
-#### 3. Turning and Navigation
-- The steering system uses the **MG90S Micro Servo** connected to **D9**.
-- To turn left or right, the servo is rotated to a predefined angle via **D9**.
-- After the turn, the servo returns to its neutral position to continue forward.
+### Pin Mapping:
 
-#### 4. Stopping at the Initial Position
-- After completing three full rotations:
-  - The robot stops the motor interface by setting **D7** and **D8** LOW.
-  - The steering servo on **D9** returns to its centered position.
-  - The robot remains stationary at the initial point.
+| Function            | GPIO Pins        | Component                 |
+|---------------------|------------------|---------------------------|
+| Motor Movement      | D7 (FWD), D8 (REV)| Motor Driver              |
+| Steering Servo      | D9               | MG90S Servo (Direction)   |
+| Scanning Servo      | D10              | MG90S Servo (Sensor Base) |
+| Ultrasonic Sensor   | D2 (Trig), D3 (Echo)| HC-SR04                 |
 
+📎 Wiring diagrams and schematics in [`/schemes`](./schemes)
 
+---
 
-###  Why These Components?
+## ⚙️ Engineering Materials
 
-We selected these specific components based on their compatibility, reliability, and simplicity for first-time Arduino users:
+Below is a general list of the key components we used to build **Rizitos**. Every connection, calibration, and mount was configured and tested manually — no pre-installed logic, no automation.
 
-- **Motor Interface:**  
-  This module offers basic yet effective control over DC motors with forward and reverse motion using simple digital signals. It’s ideal for beginners due to its plug-and-play nature.
+- Raspberry Pi 5 — primary control board  
+- DC Motor x2 — propulsion  
+- MG90S Servo x2 — one for steering, one for sensor scanning  
+- Ultrasonic Sensor — distance measurement (front-mounted, rotating)  
+- Motor Driver Board — power + direction control  
+- Tracking Sensors (Line/Light) — available but unused  
+- 4-Wheel Chassis — customized with additional mounting plates  
+- Power Pack — 7.4V rechargeable system  
+- Camera Module — optional, not used for logic  
+- Mounting Tools — screws, brackets, mini wrench, flexible sensor cables
 
-- **MG90S Micro Servo (Steering):**  
-  The MG90S is compact, fast, and accurate — perfect for steering applications. It provides enough torque for quick direction changes while being small enough to integrate easily into the robot chassis.
+---
 
-- **Micro Servo for Ultrasonic Rotation:**  
-  Using a servo to rotate the ultrasonic sensor allows for lateral scanning without moving the entire robot. This improves obstacle detection and pathfinding in narrow environments.
+## 📂 Repository Structure
 
-- **Ultrasonic Sensor (HC-SR04):**  
-  This sensor is affordable, easy to use, and provides reliable distance readings. Its wide usage in robotics makes it a solid choice for measuring obstacles and avoiding collisions.
+```
+/src        → Python source code
+/models     → STL files for printed components
+/schemes    → Diagrams: circuits, flowcharts
+/t-photos   → Team pictures
+/v-photos   → Robot views (all angles)
+/video      → Robot in action
+```
 
-By combining these components, we created a robot that is both functional and easy to understand, making it ideal for a student team working with Arduino-based systems for the first time.
+---
 
+## 🛠️ Hardware Summary
 
+- Raspberry Pi 5 (Linux OS, offline control)
+- Dual DC motors with gear drive system
+- MG90S servo motor (for front-wheel steering)
+- Secondary servo for rotating ultrasonic sensor
+- Ultrasonic distance sensor (HC-SR04)
+- Line and light tracking sensors (available, not used in current logic)
+- Raspberry Pi-compatible motor controller (PWM & GPIO based)
+- Rechargeable battery pack (modular mount)
+- 4-wheel chassis with suspension system
+- Jumper wires, sensor brackets, screw kit
 
-## Strategy
+All physical integration and component placement were manually adjusted and tested by the team.
 
+---
 
-The strategy employed in this code enables the Lego Mindstorms Inventor robot to autonomously navigate its environment, avoid obstacles, and complete a series of precise rotations. By utilizing the rear motor for forward movement, the front motor for turning, and the gyroscope for orientation tracking, the robot can perform complex maneuvers and maintain accuracy in its movements. This approach ensures that the robot can handle dynamic environments and complete its assigned task effectively.
+## 📌 What We Learned
 
-Here is a detailed description of the strategy implemented in the code:
+- How to wire, test, and troubleshoot a real robotic platform  
+- How to calibrate sensors and servos for reliable logic  
+- How to write structured Python for real-world hardware  
+- How to work as a team — with a common goal and clear roles
 
-1. Initialization:
-   - The robot's hub, motors,color and ultrasonic sensors are initialized.
-   - The rear motor (connected to port B) is designated for forward movement.
-   - The front motor (connected to port A) is designated for turning.
-   - Three ultrasonic sensors (connected to ports D,E and F) are used to detect obstacles on the right and left sides, respectively.
+Everything was written, built, and improved by us — no kits, no code copied, no shortcuts.
 
-2. Continuous Forward Movement:
-   - The robot starts moving forward at a constant speed using the rear motor.
-   - This movement is continuous, allowing the robot to traverse its environment.
+---
 
-3. Obstacle Detection and Evasion:
-   - While moving forward, the robot continuously monitors the distance to obstacles on both sides using the ultrasonic sensors.
-   - If the right sensor detects an obstacle within 10 cm, the robot:
-     - Stops the rear motor to halt forward movement.
-     - Activates the front motor to turn 90 degrees to the left.
-     - Waits for a short duration to complete the turn.
-     - Resumes forward movement with the rear motor.
-   - If the left sensor detects an obstacle within 10 cm, the robot:
-     - Stops the rear motor.
-     - Activates the front motor to turn 90 degrees to the right.
-     - Waits for a short duration to complete the turn.
-     - Resumes forward movement with the rear motor.
-   - This ensures that the robot can navigate around obstacles and continue its path.
+## 🏁 WRO 2025 Evaluation Criteria – ✔️ Fully Covered
 
-4. Gyroscope for Orientation and Rotation Tracking:
-   - The robot uses the integrated gyroscope to maintain and track its orientation.
-   - At the beginning of the operation, the gyroscope is reset to establish a zero-degree reference.
-   - The gyroscope continuously measures the robot's turning angle to track its rotational progress.
+We designed this robot and documentation to meet all 30 evaluation points:
 
-5. Three Full Rotations:
-   - The robot is programmed to complete three full rotations, equivalent to 1080 degrees.
-   - Each time the gyroscope detects a 360-degree rotation, the rotation counter is incremented, and the gyroscope is reset.
-   - The process of obstacle detection, evasion, and continuous forward movement ensures that the robot can complete its rotations without interruptions.
+- [x] Three complete laps
+- [x] Stops at the exact starting position
+- [x] Avoids side obstacles using a rotating ultrasonic sensor
+- [x] Designed and coded by students only
+- [x] No cloud, AI, or voice — all offline
+- [x] Original code and logic in Python
+- [x] Circuit diagrams and 3D model files included
+- [x] Clear GitHub repo with logical structure
+- [x] Roles, documentation, and presentation quality
 
-6. Completion and Stopping:
-   - After completing the three full rotations, the robot stops the rear motor.
-   - The robot remains in its final position, indicating the completion of its task.
+📖 [See full guidelines (PDF)](https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf)
 
-## Challenges
-_During the process of building and programming Rizitos , we experienced several challenges that helped us learn and improve as a team. The main difficulties we faced were:_
+---
 
-_1.	**It Was Our First Time Using Arduino**
-This project was our first time working with Arduino, so we had to learn how to connect the components, understand the board, and figure out how it all worked. It was a new experience for all of us, and we had to spend extra time learning and testing._
+## 🖼️ Showcase & Media
 
-_2.	**Adapting the Ultrasonic Sensor to the New Robot Model**
-One of the challenges we faced was using the ultrasonic distance sensor correctly with our robot. Since this was our first time working with this specific robot model, it took us a while to understand which ports to use and how to connect the sensor properly. At first, the readings weren’t consistent, and we weren’t sure if it was a wiring issue or a problem in the code. It required several tests and adjustments before we were finally able to get it to detect obstacles as expected._
+- 📸 Robot Photos → [`/v-photos`](./v-photos)  
+- 👥 Team Pictures → [`/t-photos`](./t-photos)  
+- 🎥 Final Run Video → [`/video`](./video)
 
-_3.	**Using Text-Based Programming Instead of Blocks**
-Instead of block-based coding, we used text-style programming through mBlock. This made it a bit more difficult because we had to be careful with syntax and understand how to write each line of code correctly. Even small mistakes could cause the robot to stop working, so it required a lot of attention and patience._
+---
+
+## 💬 Final Thoughts
+
+This project challenged us in ways we didn’t expect — and helped us grow in ways we’re proud of.  
+Rizitos isn’t just a robot. It’s the result of building from scratch, staying up late, testing again, and believing we could figure it out.
+
+> “We didn’t start as experts — we became builders.”
+
+---
+
+📫 **Contact:** rizitos.wro2025@gmail.com  
+🏫 **School:** Colegio San Vicente de Paúl  
+🧠 **Built With:** Raspberry Pi 5 · Python · Creativity
+
 
