@@ -23,10 +23,9 @@ Our group includes two seniors — **Flor Glaize** and **Francis Mojica** — an
 
 Together, we combine creativity, logic, and persistence to bring Rizitos to life: a fully autonomous robot designed to overcome obstacles, complete multiple laps, and finish strong.
 
-
 ---
 
-##  Our robot **Rizitos**
+## 🤖 Our Robot: **Rizitos**
 
 <p align="center">
   <img src="./assets/robot_banner.jpg" width="80%" alt="Rizitos Robot Front View"/>
@@ -36,6 +35,7 @@ Together, we combine creativity, logic, and persistence to bring Rizitos to life
 
 The robot is based on a custom-modified chassis and multi-sensor platform. It includes ultrasonic detection, steering logic, lap tracking, and precise stop behavior — all coded in **Python**, running fully offline on a **Raspberry Pi 5**.
 
+> “Made from what we had. Powered by what we learned.”
 
 ---
 
@@ -51,126 +51,81 @@ The robot is based on a custom-modified chassis and multi-sensor platform. It in
     <td align="center">
       <b>Francis Mojica</b><br>
       Rizito's Software Programmer 💻<br>
-      <sub>Creates Rizito's coding and programming </sub>
+      <sub>Creates Rizito's coding and programming</sub>
     </td>
     <td align="center">
       <b>Flor Glaize</b><br>
       Rizito's Mechanical Builder ⚙️<br>
-      <sub>Focuses on Rizito's structure and Hardware </sub>
+      <sub>Focuses on Rizito's structure and hardware</sub>
     </td>
     <td align="center">
       <b>Hebe Hernández</b><br>
-     Rizito's Documenter 📄<br>
-      <sub> Records Rizito's GitHub repository, diagrams and schemes</sub>
+      Rizito's Documenter 📄<br>
+      <sub>Records Rizito's GitHub repository, diagrams and schemes</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-##  Rizito's Mobility System
+##  Repository Content
 
-Rizitos is designed to:
+This repository is organized into clear folders, each holding specific materials related to Rizitos:
 
-- Move forward autonomously  
-- Detect lateral obstacles  
-- Perform smooth steering  
-- Complete 3 full laps  
-- Stop at the starting position
-
-### Core Logic:
-
-1. **Obstacle Detection:**  
-   The ultrasonic sensor continuously scans the front. If an obstacle is detected, the robot stops and begins a side scan using a rotating servo.
-
-2. **Side Scanning & Decision Making:**  
-   The scanning servo rotates the sensor left and right. Based on available space, the robot turns using the steering servo.
-
-3. **Turning Mechanism:**  
-   The steering servo (mounted on the front wheel axis) adjusts direction before the motors resume forward motion.
-
-4. **Lap Counter:**  
-   The robot internally counts laps using time or angle thresholds. After completing 3 full circuits, it stops all motors.
+| Folder          | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| [`models/`](./models)     | Contains Rizito's STL and design files used for 3D printing and fabrication.        |
+| [`other/`](./other)       | Includes additional diagrams and documentation of Rizito's motion and materials.   |
+| [`schemes/`](./schemes)   | PNG diagrams illustrating all electromechanical components and wiring connections. |
+| [`src/`](./src)           | Source code written in Python that controls the robot's autonomous functions.     |
+| [`t-photos/`](./t-photos) | Official team group photo of Team Rizitos.                                         |
+| [`v-photos/`](./v-photos) | Photos of Rizitos robot taken from multiple angles.                               |
+| [`video/`](./video)       | Final challenge video of Rizitos completing all 3 laps.                           |
 
 ---
 
-## Why we chose these components?
+##  Engineering Materials
 
-- **DC Gear Motors:** Deliver enough torque and speed to maintain consistent movement across the test course.  
-- **Motor Controller Board:** Provides safe GPIO interfacing with adequate current handling.  
-- **MG90S Servos:** Lightweight and reliable for precise direction adjustments.  
-- **Ultrasonic Sensor (HC-SR04):** Balanced cost, simplicity, and sufficient accuracy for real-time navigation.  
-- **Raspberry Pi 5:** Offers GPIO flexibility, multitasking capabilities, and support for Python-based logic.
+Below is a summary of the core components used to bring Rizitos to life. All parts were assembled and modified by us to meet the WRO Future Engineers 2025 challenge.
 
----
-
-##  System Overview
-
-### Key Functions:
-- Autonomous forward movement  
-- Side-scanning obstacle detection (rotating ultrasonic sensor)  
-- Evasive turning with steering servo  
-- Lap counter with automatic stop  
-- Fully offline execution — no voice or AI modules
-
-### GPIO Pin Mapping
-
-| Function              | GPIO Pins                  | Component                     |
-|-----------------------|----------------------------|-------------------------------|
-| Motor Movement        | GPIO17 (FWD), GPIO27 (REV) | Dual DC Motors via Driver     |
-| Steering Servo        | GPIO23                     | MG90S Servo (Front Steering)  |
-| Scanning Servo        | GPIO22                     | MG90S Servo (Sensor Rotation) |
-| Ultrasonic Sensor     | GPIO5 (Trig), GPIO6 (Echo) | HC-SR04 Distance Sensor       |
-
-📎 Wiring diagrams and schematics available in [`/schemes`](./schemes)
+- Raspberry Pi 5 (central processor)
+- Dual DC Motor Driver (GPIO-controlled)
+- 2x MG90S Micro Servo Motors (steering + ultrasonic base)
+- HC-SR04 Ultrasonic Distance Sensor
+- 3D-printed camera + sensor mounts
+- Modified smart car chassis with front-wheel steering
+- USB Camera (used for testing only; not used during challenge)
+- GPIO jumper wires, 9V battery case, L-type wrench, screwdrivers, and cable ties
 
 ---
 
-##  Strategy for Performance
+##  Building Instructions
 
-### Open Round (No Obstacles)
+**Robot Structure:**
+- The main concept for Rizitos' design was developed by our team using an external guide as reference.  
+  → [`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
 
-In the open round, Rizitos performs clean laps with the following logic:
+**Operating Diagram:**
+- The [`schemes/`](./schemes) folder contains all diagrams used to distribute Rizito's connection ports and lists all electronic components.
 
-- Motors activate forward motion (GPIO17 HIGH)  
-- The ultrasonic sensor passively monitors distance (no evasive action)  
-- The lap counter increments after each full loop  
-- After completing 3 rotations, the robot stops and resets servo angles
+**Programming Code:**
+- The [`src/`](./src) folder includes our Python source code that manages the robot’s movement, sensors, and decision-making logic.
 
-### Obstacle Course Execution
-
-In the challenge round with obstacles:
-
-- If an obstacle is detected ≤ 15 cm ahead:  
-  - Motors stop  
-  - Scanning servo rotates the ultrasonic sensor (left to right)  
-  - Robot decides the clearer path  
-  - Steering servo turns left/right accordingly  
-  - Motors resume forward motion
-
-- Obstacle evasion repeats dynamically throughout the run
+> 🛠️ *All programming and hardware integration were completed by us from scratch.*
 
 ---
 
-## 🧱 Repository Structure
+## 📌 Note on Development
+> [!NOTE]
 
-| Folder        | Description                                                                 |
-|---------------|-----------------------------------------------------------------------------|
-| [`/src`](./src)          | Main Python control scripts for mobility, sensors, and logic              |
-| [`/schemes`](./schemes)  | Electrical wiring diagrams and pin layout maps                         |
-| [`/models`](./models)    | 3D printable models for mechanical parts (STL files)                   |
-| [`/t-photos`](./t-photos)| Team photo assets used in documentation                                |
-| [`/v-photos`](./v-photos)| Images of the robot (front, side, diagonal views)                      |
-| [`/video`](./video)      | Embedded video of Rizitos running the WRO course                       |
-| [`/other`](./other)      | Any additional planning files or charts                               |
+> ⚙️ **Rizitos is in constant evolution.**  
+> As we iterate, test, and improve our system, both the software and hardware may be updated regularly.  
+> If you notice inconsistencies between sections or media, feel free to reach out or contribute!
 
 ---
 
-> [!NOTE]  
-> This repository is a continuous work in progress. As our team improves Rizitos through testing, redesigns, and code optimization, some sections of the documentation may evolve.  
-> If you notice any inconsistencies or have suggestions, please reach out through GitHub Issues.
 
----
+
 
 
 
