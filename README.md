@@ -25,7 +25,7 @@ Together, we combine creativity, logic, and persistence to bring Rizitos to life
 
 ---
 
-## 🤖 Our Robot: **Rizitos**
+##  Our Robot: **Rizitos**
 
 <p align="center">
   <img src="./assets/robot_banner.jpg" width="80%" alt="Rizitos Robot Front View"/>
@@ -35,7 +35,7 @@ Together, we combine creativity, logic, and persistence to bring Rizitos to life
 
 The robot is based on a custom-modified chassis and multi-sensor platform. It includes ultrasonic detection, steering logic, lap tracking, and precise stop behavior — all coded in **Python**, running fully offline on a **Raspberry Pi 5**.
 
-> “Made from what we had. Powered by what we learned.”
+
 
 ---
 
@@ -70,7 +70,7 @@ The robot is based on a custom-modified chassis and multi-sensor platform. It in
 
 ##  Repository Content
 
-This repository is organized into clear folders, each holding specific materials related to Rizitos:
+:
 
 | Folder          | Description                                                                 |
 |------------------|-----------------------------------------------------------------------------|
@@ -115,7 +115,7 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 
 ---
 
-## 📌 Note on Development
+
 > [!NOTE]
 
 > ⚙️ **Rizitos is in constant evolution.**  
@@ -124,6 +124,48 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 
 ---
 
+## Rizito's Mobility System
+
+### Key Functional Behaviors
+
+#### 1. **Continuous Forward Movement**
+- The robot uses a **DC gear motor** connected through a **motor driver**.
+- The motor is activated by `GPIO17` (forward) and deactivated by `GPIO27` (reverse stop).
+- While moving forward, the ultrasonic sensor constantly checks the path ahead for potential obstacles.
+
+#### 2. **Lateral Obstacle Detection & Evasion**
+- An **ultrasonic sensor (HC-SR04)** mounted on a rotating servo scans the left and right sides.
+- The scanning servo is controlled by `GPIO22`, and the sensor operates via `GPIO5` (Trig) and `GPIO6` (Echo).
+- If an obstacle is detected within a 15 cm range:
+  - Forward motion is halted.
+  - The scanning servo rotates the sensor to both directions.
+  - The robot chooses the clearer path.
+  - It turns using the **steering servo** on `GPIO23`.
+  - Then, forward motion resumes once the path is clear.
+
+#### 3. **Turning and Steering**
+- The robot uses a front-mounted **MG90S micro servo** on `GPIO23` for steering.
+- It receives directional commands (left or right) based on sensor feedback.
+- After completing the turn, the servo resets to its center position for straight movement.
+
+#### 4. **Lap Completion and Stop Behavior**
+- The robot keeps track of laps internally (via code).
+- After completing **3 full laps**, it:
+  - Deactivates the motor by setting `GPIO17` and `GPIO27` to LOW.
+  - Centers the steering servo.
+  - Stops at its starting position and remains idle.
+
+---
+
+###  Why These Components?
+
+| Component                       | Purpose & Reason                                                                  |
+|--------------------------------|-----------------------------------------------------------------------------------|
+| **DC Gear Motor**              | Drives the robot forward with consistent torque; controlled via motor driver.    |
+| **Motor Driver Board**         | Interfaces motor control using GPIO signals for forward/reverse movement.        |
+| **MG90S Servo (Steering)**     | Handles front-wheel steering with speed and precision.                          |
+| **MG90S Servo (Sensor Mount)** | Rotates the ultrasonic sensor for side scanning.                                |
+| **Ultrasonic Sensor (HC-SR04)**| Provides accurate distance measurements to detect obstacles.                     |
 
 
 
