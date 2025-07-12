@@ -72,123 +72,109 @@ It navigates. It avoids. It completes 3 full laps. And it does it without any re
 
 ---
 
+## ⚙️ Autonomous Mobility System
+
+Rizitos is designed to:
+
+- Move forward autonomously  
+- Detect lateral obstacles  
+- Perform smooth steering  
+- Complete 3 full laps  
+- Stop at the starting position
+
+### Core Logic:
+
+1. **Obstacle Detection:**  
+   The ultrasonic sensor continuously scans the front. If an obstacle is detected, the robot stops and begins a side scan using a rotating servo.
+
+2. **Side Scanning & Decision Making:**  
+   The scanning servo rotates the sensor left and right. Based on available space, the robot turns using the steering servo.
+
+3. **Turning Mechanism:**  
+   The steering servo (mounted on the front wheel axis) adjusts direction before the motors resume forward motion.
+
+4. **Lap Counter:**  
+   The robot internally counts laps using time or angle thresholds. After completing 3 full circuits, it stops all motors.
+
+---
+
+## 💡 Component Justification
+
+- **DC Gear Motors:** Deliver enough torque and speed to maintain consistent movement across the test course.  
+- **Motor Controller Board:** Provides safe GPIO interfacing with adequate current handling.  
+- **MG90S Servos:** Lightweight and reliable for precise direction adjustments.  
+- **Ultrasonic Sensor (HC-SR04):** Balanced cost, simplicity, and sufficient accuracy for real-time navigation.  
+- **Raspberry Pi 5:** Offers GPIO flexibility, multitasking capabilities, and support for Python-based logic.
+
+---
+
 ## 🧠 System Overview
 
 ### Key Functions:
-- Autonomous forward movement
-- Side-scanning obstacle detection (rotating ultrasonic sensor)
-- Evasive turning with steering servo
-- Lap counter with automatic stop
-- Offline execution — no voice or AI modules
+- Autonomous forward movement  
+- Side-scanning obstacle detection (rotating ultrasonic sensor)  
+- Evasive turning with steering servo  
+- Lap counter with automatic stop  
+- Fully offline execution — no voice or AI modules
 
-### Pin Mapping:
+### GPIO Pin Mapping
 
-| Function            | GPIO Pins        | Component                 |
-|---------------------|------------------|---------------------------|
-| Motor Movement      | D7 (FWD), D8 (REV)| Motor Driver              |
-| Steering Servo      | D9               | MG90S Servo (Direction)   |
-| Scanning Servo      | D10              | MG90S Servo (Sensor Base) |
-| Ultrasonic Sensor   | D2 (Trig), D3 (Echo)| HC-SR04                 |
+| Function              | GPIO Pins                  | Component                     |
+|-----------------------|----------------------------|-------------------------------|
+| Motor Movement        | GPIO17 (FWD), GPIO27 (REV) | Dual DC Motors via Driver     |
+| Steering Servo        | GPIO23                     | MG90S Servo (Front Steering)  |
+| Scanning Servo        | GPIO22                     | MG90S Servo (Sensor Rotation) |
+| Ultrasonic Sensor     | GPIO5 (Trig), GPIO6 (Echo) | HC-SR04 Distance Sensor       |
 
-📎 Wiring diagrams and schematics in [`/schemes`](./schemes)
-
----
-
-## ⚙️ Engineering Materials
-
-Below is a general list of the key components we used to build **Rizitos**. Every connection, calibration, and mount was configured and tested manually — no pre-installed logic, no automation.
-
-- Raspberry Pi 5 — primary control board  
-- DC Motor x2 — propulsion  
-- MG90S Servo x2 — one for steering, one for sensor scanning  
-- Ultrasonic Sensor — distance measurement (front-mounted, rotating)  
-- Motor Driver Board — power + direction control  
-- Tracking Sensors (Line/Light) — available but unused  
-- 4-Wheel Chassis — customized with additional mounting plates  
-- Power Pack — 7.4V rechargeable system  
-- Camera Module — optional, not used for logic  
-- Mounting Tools — screws, brackets, mini wrench, flexible sensor cables
+📎 Wiring diagrams and schematics available in [`/schemes`](./schemes)
 
 ---
 
-## 📂 Repository Structure
+## 🧭 Strategy for Performance
 
-```
-/src        → Python source code
-/models     → STL files for printed components
-/schemes    → Diagrams: circuits, flowcharts
-/t-photos   → Team pictures
-/v-photos   → Robot views (all angles)
-/video      → Robot in action
-```
+### Open Round (No Obstacles)
 
----
+In the open round, Rizitos performs clean laps with the following logic:
 
-## 🛠️ Hardware Summary
+- Motors activate forward motion (GPIO17 HIGH)  
+- The ultrasonic sensor passively monitors distance (no evasive action)  
+- The lap counter increments after each full loop  
+- After completing 3 rotations, the robot stops and resets servo angles
 
-- Raspberry Pi 5 (Linux OS, offline control)
-- Dual DC motors with gear drive system
-- MG90S servo motor (for front-wheel steering)
-- Secondary servo for rotating ultrasonic sensor
-- Ultrasonic distance sensor (HC-SR04)
-- Line and light tracking sensors (available, not used in current logic)
-- Raspberry Pi-compatible motor controller (PWM & GPIO based)
-- Rechargeable battery pack (modular mount)
-- 4-wheel chassis with suspension system
-- Jumper wires, sensor brackets, screw kit
+### Obstacle Course Execution
 
-All physical integration and component placement were manually adjusted and tested by the team.
+In the challenge round with obstacles:
+
+- If an obstacle is detected ≤ 15 cm ahead:  
+  - Motors stop  
+  - Scanning servo rotates the ultrasonic sensor (left to right)  
+  - Robot decides the clearer path  
+  - Steering servo turns left/right accordingly  
+  - Motors resume forward motion
+
+- Obstacle evasion repeats dynamically throughout the run
 
 ---
 
-## 📌 What We Learned
+## 🧱 Repository Structure
 
-- How to wire, test, and troubleshoot a real robotic platform  
-- How to calibrate sensors and servos for reliable logic  
-- How to write structured Python for real-world hardware  
-- How to work as a team — with a common goal and clear roles
-
-Everything was written, built, and improved by us — no kits, no code copied, no shortcuts.
-
----
-
-## 🏁 WRO 2025 Evaluation Criteria – ✔️ Fully Covered
-
-We designed this robot and documentation to meet all 30 evaluation points:
-
-- [x] Three complete laps
-- [x] Stops at the exact starting position
-- [x] Avoids side obstacles using a rotating ultrasonic sensor
-- [x] Designed and coded by students only
-- [x] No cloud, AI, or voice — all offline
-- [x] Original code and logic in Python
-- [x] Circuit diagrams and 3D model files included
-- [x] Clear GitHub repo with logical structure
-- [x] Roles, documentation, and presentation quality
-
-📖 [See full guidelines (PDF)](https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf)
+| Folder        | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| [`/src`](./src)          | Main Python control scripts for mobility, sensors, and logic              |
+| [`/schemes`](./schemes)  | Electrical wiring diagrams and pin layout maps                         |
+| [`/models`](./models)    | 3D printable models for mechanical parts (STL files)                   |
+| [`/t-photos`](./t-photos)| Team photo assets used in documentation                                |
+| [`/v-photos`](./v-photos)| Images of the robot (front, side, diagonal views)                      |
+| [`/video`](./video)      | Embedded video of Rizitos running the WRO course                       |
+| [`/other`](./other)      | Any additional planning files or charts                               |
 
 ---
 
-## 🖼️ Showcase & Media
-
-- 📸 Robot Photos → [`/v-photos`](./v-photos)  
-- 👥 Team Pictures → [`/t-photos`](./t-photos)  
-- 🎥 Final Run Video → [`/video`](./video)
+> [!NOTE]  
+> This repository is a continuous work in progress. As our team improves Rizitos through testing, redesigns, and code optimization, some sections of the documentation may evolve.  
+> If you notice any inconsistencies or have suggestions, please reach out through GitHub Issues.
 
 ---
 
-## 💬 Final Thoughts
-
-This project challenged us in ways we didn’t expect — and helped us grow in ways we’re proud of.  
-Rizitos isn’t just a robot. It’s the result of building from scratch, staying up late, testing again, and believing we could figure it out.
-
-> “We didn’t start as experts — we became builders.”
-
----
-
-📫 **Contact:** rizitos.wro2025@gmail.com  
-🏫 **School:** Colegio San Vicente de Paúl  
-🧠 **Built With:** Raspberry Pi 5 · Python · Creativity
 
 
