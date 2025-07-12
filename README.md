@@ -111,9 +111,7 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 **Programming Code:**
 - The [`src/`](./src) folder includes our Python source code that manages the robot’s movement, sensors, and decision-making logic.
 
-> 🛠️ *All programming and hardware integration were completed by us from scratch.*
-
----
+> 🛠️ *All programming and hardware integration were done by ourselves.*
 
 
 > [!NOTE]
