@@ -215,7 +215,7 @@ In the Challenge Round, Rizitos switches to a reactive navigation strategy using
    - After the third full lap (with successful evasion logic), the system cuts motor power and resets servos.
    - Rizitos comes to a full and final stop at its original point.
 
-> This reactive planning system enables Rizitos to perform autonomously without AI inference or remote control — satisfying WRO Future Engineers offline constraints while maintaining flexibility and performance.
+> This reactive planning system enables Rizitos to perform autonomously without AI inference or remote control!
 
 
 
