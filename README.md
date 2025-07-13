@@ -70,7 +70,7 @@ The robot is based on a custom-modified chassis and multi-sensor platform. It in
 
 ##  Repository Content
 
-:
+This is Rizito's Repository Index, where it shows all steps for Rizito's creation!:
 
 | Folder          | Description                                                                 |
 |------------------|-----------------------------------------------------------------------------|
@@ -103,7 +103,7 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 
 **Robot Structure:**
 - The main concept for Rizitos' design was developed by our team using an external guide as reference.  
-  → [`M.V.P`](https://osoyoo.com/manual/sportcarkit.pdf)
+  → [`M.V.P`](https://www.adeept.com/video/static1/itemsfile/511343Tutorial.pdf)
 
 **Operating Diagram:**
 - The [`schemes/`](./schemes) folder contains all diagrams used to distribute Rizito's connection ports and lists all electronic components.
@@ -111,10 +111,10 @@ Below is a summary of the core components used to bring Rizitos to life. All par
 **Programming Code:**
 - The [`src/`](./src) folder includes our Python source code that manages the robot’s movement, sensors, and decision-making logic.
 
-> 🛠️ *All programming and hardware integration were done by ourselves.*
+>  *All programming and hardware integration were done by ourselves.*
 
 
-> ⚙️ **Rizitos is in constant evolution!.**  
+>  **Rizitos is in constant evolution!.**  
 > As we iterate, test, and improve our system, both the software and hardware may be updated regularly.  
 > If you notice inconsistencies between sections or media, feel free to reach out or contribute!
 
@@ -172,7 +172,7 @@ The code we developed for Rizitos enables it to function **fully offline** and a
 
 ---
 
-### 🚦 Open Round Strategy (No Obstacles)
+###  Open Round Strategy (No Obstacles)
 
 In the Open Round, Rizitos focuses on uninterrupted movement and precise tracking of lap completions:
 
@@ -191,7 +191,7 @@ In the Open Round, Rizitos focuses on uninterrupted movement and precise trackin
 
 ---
 
-### 🚧 Obstacle Round Strategy (Dynamic Avoidance)
+###  Obstacle Round Strategy (Dynamic Avoidance)
 
 In the Challenge Round, Rizitos switches to a reactive navigation strategy using distance sensing and servo control:
 
