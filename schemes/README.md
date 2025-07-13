@@ -7,5 +7,5 @@ In this section is presented the  [`connection diagram`](https://github.com/csvp
 ![Regular](https://github.com/csvprobotica/Rizitos_2025/blob/main/schemes/Connection%20diagram/Captura%20de%20pantalla%202025-07-01%20a%20la(s)%2011.29.04.png)
 
 ## Electronic Components
-![Regular](https://github.com/csvprobotica/Rizitos_2025/blob/main/schemes/Electromechanical%20Components/Captura%20de%20pantalla%202025-07-02%20a%20la(s)%2009.55.56.png)
+![Regular](https://github.com/csvprobotica/Team-Rizitos_WRO2025/blob/main/schemes/Electromechanical%20Components/Captura%20de%20pantalla%202025-07-13%20a%20la(s)%2018.01.44.png)
 
