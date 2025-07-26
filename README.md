@@ -1,6 +1,4 @@
-<!-- Logo/Header -->
-<p align="center">
-  <img src="./assets/logo/rizitos_logo.png" width="220" alt="Rizitos Logo"/>
+
 </p>
 
 <h1 align="center">Team Rizitos 🇵🇦 — WRO Future Engineers 2025</h1>
