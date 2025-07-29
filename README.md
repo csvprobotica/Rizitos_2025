@@ -1,7 +1,7 @@
 
 </p>
 
-<h1 align="center">Team Rizitos 🇵🇦 — WRO Future Engineers 2025</h1>
+<h1 align="center">Team RoboG 🇵🇦 — WRO Future Engineers 2024</h1>
 <p align="center">
   <i>Panamá • WRO FUTURE ENGINEERS SENIOR'S CATEGORY • Python • Autonomous Systems</i>
 </p>
